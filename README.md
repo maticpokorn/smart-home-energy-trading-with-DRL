@@ -55,11 +55,9 @@ Due to the unstable nature of the DQN algorithm, meaningful trainig results can 
 ```
 project
 │   README.md
-│   adjust_dataset.py
 |   dqn.py
 |   env.py
-|   model.py
-|   reshape_ev_charging.py
+|   HEMS.py
 │
 └───data
 │   │   rtp.csv
@@ -67,8 +65,5 @@ project
 │   |   tou2.csv
 │
 └───saved_nets
-|   │...
-│
-└───raw_data
-    │...    
+    │...  
 ```
