@@ -16,7 +16,7 @@ The below code trains a new RL agent:
 manager = HEMS.HEMS()
 manager.train()
 ```
-The main class has a few superparameters:
+The **HEMS** class has a few superparameters:
 - ```load```(default = False): tells the object to initialize from a pre-trained network
 - ```path``` (default = None): path to directory from where to load if ```load = True```
 - ```battery``` (default = 20): maximum battery capacity in kWh
