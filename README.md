@@ -36,7 +36,7 @@ The ```HEMS``` class has a few parameters:
 ### Saving
 The following code saves the manager to a directory called ```'my_net'```:
 ```
-manager.save('my_net')
+manager.save('saved_nets/my_net')
 ```
 
 ### Loading from a saved directory
