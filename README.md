@@ -1,30 +1,33 @@
 # SMART HOME ENERGY MANAGEMENT
-This repository storest the code for a conference paper about smart home energy management using reinforcement learning. It is possible for the user to train their own RL agent, as well as load pre-trained neural networks and test the agent's performance.
+This repository storest the code for a conference paper about smart home energy management using Deep Reinforcement Learning. It is possible for the user to train their own DRL agent, as well as load pre-trained neural networks and test the agent's performance.
 
 ## INSTALLATION
 To begin using the code, just clone the repository:
-```git clone https://github.com/maticpokorn/smart_home_energy_management.git```
+```git clone https://github.com/maticpokorn/SHEM_DQN.git```
 
 ## USAGE
 To use the functionalities of this repository, we must first import the module
 ```
-import model
+import HEMS
 ```
 ### Training an agent
 The below code trains a new RL agent:
 ```
-manager = model.SHEM()
+manager = HEMS.HEMS()
 manager.train()
 ```
 The main class has a few superparameters:
 - ```load```(default = False): tells the object to initialize from a pre-trained network
 - ```path``` (default = None): path to directory from where to load if ```load = True```
-- ```battery``` (default = 100): maximum battery capacity in kWh
-- ```max_en``` (default = 5.8 / 4): maximum energy in kWh that can be charged or discharged from the battery in a single step (in our case in a 15 min window)
+- ```battery``` (default = 20): maximum battery capacity in kWh
+- ```max_en``` (default = 1.5): maximum energy in kWh that can be charged or discharged from the battery in a single step (in our case in a 15 min window)đ
+- ```eff``` (default = 0.9): input / output battery efficiency
+- ```price coefs``` (default = [2,1]): price coefficients. They specifiy by how much the market price from the dataset should be multiplied to get buying and selling price of energy. This is an artificial way to introduce Distribution System Operator charges.
 - ```n_days``` (default = 2): number of past days that will be stored in the environment state
+- ```data_path``` (default = 'data/rtp.csv'): specifies the dataset with which pricing model to use
 #### Optional parameters for ```manager.train()```:
-- ```a``` (default = 3): weight parameters for reward function
-- ```b``` (default = 3): weight parameters for reward function
+- ```a``` (default = 3): weight parameter for reward function
+- ```b``` (default = 3): weight parameter for reward function
 - ```n_episodes``` (default = 200): number of training episodes
 - ```epsilon_reduce``` (default = 0.98): factor by which the exploration rate (epsilon) is reduced after each episode
 - ```n_days``` (default = 2): number of past days that will be stored in the environment state
