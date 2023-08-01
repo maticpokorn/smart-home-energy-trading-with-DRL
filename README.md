@@ -20,7 +20,7 @@ The ```HEMS``` class has a few parameters:
 - ```load```(default = False): tells the object to initialize from a pre-trained network
 - ```path``` (default = None): path to directory from where to load if ```load = True```
 - ```battery``` (default = 20): maximum battery capacity in kWh
-- ```max_en``` (default = 1.5): maximum energy in kWh that can be charged or discharged from the battery in a single step (in our case in a 15 min window)đ
+- ```max_en``` (default = 1.5): maximum energy in kWh that can be charged or discharged from the battery in a single step (in our case in a 15 min window)
 - ```eff``` (default = 0.9): input / output battery efficiency
 - ```price coefs``` (default = [2,1]): price coefficients. They specifiy by how much the market price from the dataset should be multiplied to get buying and selling price of energy. This is an artificial way to introduce Distribution System Operator charges.
 - ```n_days``` (default = 2): number of past days that will be stored in the environment state
