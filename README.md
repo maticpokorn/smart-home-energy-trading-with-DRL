@@ -1,5 +1,5 @@
 # SMART HOME ENERGY MANAGEMENT WITH DRL
-This repository storest code for a conference paper about smart home energy management using Deep Reinforcement Learning. It is possible for the user to train their own DRL agent, as well as load pre-trained models and test the agent's performance.
+This python library storest code for a conference paper about smart home energy management using Deep Reinforcement Learning. It is possible for the user to train their own DRL agent, as well as load pre-trained models and test the agent's performance.
 
 ## INSTALLATION
 To begin using the code, just clone the repository:
