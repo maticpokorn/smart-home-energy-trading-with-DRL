@@ -66,6 +66,7 @@ This is a Deep Reinforcement Learning library for Smart Home Energy Management. 
 
 ## Using ```env.py``` independently
 ```env.py``` defines the RL environment for this particular problem.
+### Env
 To initialise the environment, we call the class ```Env```. It has the following paramenters:
 - ```df``` pandas datadrame from which the environment will be sourced
 - ```full_battery_capacity``` (default = 20) 
@@ -78,11 +79,11 @@ To initialise the environment, we call the class ```Env```. It has the following
 - ```low``` (default = 0) index in ```df``` at which the episode will begin if ```test == True```
 - ```high``` (default = 30000) index in ```df``` at which the episode will end if ```test == True```
 
-  ### Functions
-  ```reset(seed)``` resets the environment with seeded randomness if ```test == False```, otherwise it begins at ```low```
-  ```next_observation()``` returns the most recent step
-  ```next_observation_normalizes()``` returns normalised values of the most recent step (used for feeding into neural net)
-  ```step(action)``` takes a step with action ```action``` and returns the next step, reward from the transition and whether the episode is to be terminated. Additionally it returns data about how much energy was exchanged between entities in the system
+### Functions
+- ```reset(seed)``` resets the environment with seeded randomness if ```test == False```, otherwise it begins at ```low```
+- ```next_observation()``` returns the most recent step
+- ```next_observation_normalized()``` returns normalised values of the most recent step (used for feeding into neural net)
+- ```step(action)``` takes a step with action ```action``` and returns the next step, reward from the transition and whether the episode is to be terminated. Additionally it returns data about how much energy was exchanged between entities in the system
   
 
 ## FOLDER STRUCTURE
