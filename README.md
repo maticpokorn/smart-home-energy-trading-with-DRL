@@ -25,7 +25,7 @@ The ```HEMS``` class has a few parameters:
 - ```price coefs``` (default = [2,1]): price coefficients. They specifiy by how much the market price from the dataset should be multiplied to get buying and selling price of energy. This is an artificial way to introduce Distribution System Operator charges.
 - ```n_days``` (default = 2): number of past days that will be stored in the environment state
 - ```data_path``` (default = 'data/rtp.csv'): specifies the dataset with which pricing model to use
-#### Optional parameters for ```manager.train()```:
+#### Optional parameters for ```manager.train()``` function:
 - ```a``` (default = 3): weight parameter for reward function
 - ```b``` (default = 3): weight parameter for reward function
 - ```n_episodes``` (default = 200): number of training episodes
