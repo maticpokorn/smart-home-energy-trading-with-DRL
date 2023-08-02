@@ -5,6 +5,16 @@ This python library storest code for a conference paper about smart home energy 
 To begin using the code, just clone the repository:
 ```git clone https://github.com/maticpokorn/HEMS_DQN.git```
 
+## DENPENDENCIES
+The project requires the following libraries to be installed:
+```
+pip install tqdm
+pip install torch torchvision
+pip install matplotlib
+pip install numpy
+pip install pandas
+```
+
 ## USAGE
 To use the functionalities of this repository, we must first import the module into our own ```.py``` or ```.ipynb``` file:
 ```
@@ -51,8 +61,21 @@ manager.test()
 ```
 Due to the unstable nature of the DQN algorithm, meaningful trainig results can sometimes only be achieved by significantly increasing the number of episodes or training the agent over and over (>10 times) until results are satisfactory. This is very computationally intensive and is also the reason why pre-trained managers are important for demonstrating the performance of the algorithm.
 
-## WHAT HAPPENS UNDER THE HOOD
+## What happens under the hood
 This is a Deep Reinforcement Learning library for Smart Home Energy Management. In RL, we usually need to define a RL **ENVIRONMENT** on which a RL **AGENT** is trained. That is why the ```HEMS``` class initialises an ```Env``` class from ```env.py``` (the environment) and a ```DQN``` class from ```dqn.py``` (the agent - in this case the agent is defined as an algorithm called DQN). If ```load == False``` the environment and agent are initilaised inside the ```train()``` function. If ```load == True``` the environment and agent are loaded from the saved folder.
+
+## Using ```env.py``` independently
+```env.py``` defines the RL environment for this particular problem.
+To initialise the environment, we call the class 'Env'. It has the following paramenters:
+- ```df```
+- ```full_battery_capacity```
+- ```max_energy```
+- ```eff```
+- ```price_coefs```
+- ```n_days```
+- ```n_steps```
+- ```low```
+- ```high```
 
 ## FOLDER STRUCTURE
 ```
@@ -70,3 +93,11 @@ project
 └───saved_nets
     │...  
 ```
+
+## Links
+
+## Licensing
+
+## Citation
+
+## Acknowledgement
