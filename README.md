@@ -1,11 +1,11 @@
 # SMART HOME ENERGY MANAGEMENT WITH DRL
 This python library storest code for a conference paper about smart home energy management using Deep Reinforcement Learning. It is possible for the user to train their own DRL agent, as well as load pre-trained models and test the agent's performance.
 
-## INSTALLATION
+## Installation
 To begin using the code, just clone the repository:
 ```git clone https://github.com/maticpokorn/HEMS_DQN.git```
 
-## DENPENDENCIES
+## Dependencies
 The project requires the following libraries to be installed:
 ```
 pip install tqdm
@@ -15,7 +15,7 @@ pip install numpy
 pip install pandas
 ```
 
-## USAGE
+## Usage
 To use the functionalities of this repository, we must first import the module into our own ```.py``` or ```.ipynb``` file:
 ```
 import HEMS
@@ -66,16 +66,24 @@ This is a Deep Reinforcement Learning library for Smart Home Energy Management. 
 
 ## Using ```env.py``` independently
 ```env.py``` defines the RL environment for this particular problem.
-To initialise the environment, we call the class 'Env'. It has the following paramenters:
-- ```df```
-- ```full_battery_capacity```
-- ```max_energy```
-- ```eff```
-- ```price_coefs```
-- ```n_days```
-- ```n_steps```
-- ```low```
-- ```high```
+To initialise the environment, we call the class ```Env```. It has the following paramenters:
+- ```df``` pandas datadrame from which the environment will be sourced
+- ```full_battery_capacity``` (default = 20) 
+- ```max_energy``` (default = 1.5)
+- ```eff``` (default = 0.9)
+- ```price_coefs``` (default = [2,1])
+- ```n_days``` (default = 2) number of days from which the environment will store the data
+- ```n_steps``` (default = 1000) length of episode
+- ```test``` (default = False) if set to ```False```, it will initialise the environment at a random index in ```df```, considering ```n_steps``` as the length of an episode. If set to ```True```, it will initialise the environment at index ```low``` and expect to end the episode at ```high```
+- ```low``` (default = 0) index in ```df``` at which the episode will begin if ```test == True```
+- ```high``` (default = 30000) index in ```df``` at which the episode will end if ```test == True```
+
+  ### Functions
+  ```reset(seed)``` resets the environment with seeded randomness if ```test == False```, otherwise it begins at ```low```
+  ```next_observation()``` returns the most recent step
+  ```next_observation_normalizes()``` returns normalised values of the most recent step (used for feeding into neural net)
+  ```step(action)``` takes a step with action ```action``` and returns the next step, reward from the transition and whether the episode is to be terminated. Additionally it returns data about how much energy was exchanged between entities in the system
+  
 
 ## FOLDER STRUCTURE
 ```
