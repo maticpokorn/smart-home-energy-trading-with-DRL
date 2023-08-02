@@ -3,7 +3,7 @@ This repository storest code for a conference paper about smart home energy mana
 
 ## INSTALLATION
 To begin using the code, just clone the repository:
-```git clone https://github.com/maticpokorn/SHEM_DQN.git```
+```git clone https://github.com/maticpokorn/HEMS_DQN.git```
 
 ## USAGE
 To use the functionalities of this repository, we must first import the module
