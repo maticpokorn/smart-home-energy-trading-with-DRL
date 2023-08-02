@@ -6,7 +6,7 @@ To begin using the code, just clone the repository:
 ```git clone https://github.com/maticpokorn/HEMS_DQN.git```
 
 ## USAGE
-To use the functionalities of this repository, we must first import the module
+To use the functionalities of this repository, we must first import the module into your ```.py``` or ```.ipynb``` file:
 ```
 import HEMS
 ```
