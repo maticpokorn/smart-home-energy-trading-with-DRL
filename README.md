@@ -104,8 +104,10 @@ project
 ```
 
 ## Links
-
+Repository: 
 ## Licensing
+Copyright 2023 Matic Pokorn
+The code in this project is licensed under MIT license.
 
 ## Citation
 
