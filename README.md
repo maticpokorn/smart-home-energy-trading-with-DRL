@@ -65,7 +65,7 @@ Due to the unstable nature of the DQN algorithm, meaningful trainig results can 
 This is a Deep Reinforcement Learning library for Smart Home Energy Management. In RL, we usually need to define a RL **ENVIRONMENT** on which a RL **AGENT** is trained. That is why the ```HEMS``` class initialises an ```Env``` class from ```env.py``` (the environment) and a ```DQN``` class from ```dqn.py``` (the agent - in this case the agent is defined as an algorithm called DQN). If ```load == False``` the environment and agent are initilaised inside the ```train()``` function. If ```load == True``` the environment and agent are loaded from the saved folder.
 
 ## Using ```env.py``` independently
-```env.py``` defines the RL environment for this particular problem.
+```env.py``` defines the RL environment for this particular problem. It follows the prinicple of an environment definition in the RL library 'gymnasium'.
 ### Env
 To initialise the environment, we call the class ```Env```. It has the following paramenters:
 - ```df``` pandas datadrame from which the environment will be sourced
