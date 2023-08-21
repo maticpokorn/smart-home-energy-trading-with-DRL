@@ -104,11 +104,11 @@ project
 ```
 
 ## Links
-Repository: 
+Repository: https://github.com/maticpokorn/HEMS_DQN.git
 ## Licensing
 Copyright 2023 Matic Pokorn
 The code in this project is licensed under MIT license.
 
-## Citation
-
 ## Acknowledgement
+The research leading to these results was supported in part by the HORIZON-MSCA-IF project TimeSmart No. 101063721, H2020 project BD4OPEM (grant
+agreement ID: 872525), and by the Slovenian Research Agency under the grant P2-0016.
